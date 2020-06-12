@@ -2,8 +2,9 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
+
 #url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1&api_key=6WjsN8fJCitzyklXqsYwgpb3ooDMn43p7hyO3uxW'
-var_url ="https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10"
+var_url ="https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0"
 api_key = "6WjsN8fJCitzyklXqsYwgpb3ooDMn43p7hyO3uxW"
 
 
@@ -17,7 +18,6 @@ def metodo_request(url_input,api_input)
     response = http.request(request)
     JSON.parse(response.read_body)
 end
-
 #agrega metodo armar pagina
 def buid_web_page(entrada)
     inicio = "<html>\n<head>\n</head>\n<body>\n<ul>"
