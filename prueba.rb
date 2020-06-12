@@ -17,3 +17,21 @@ def metodo_request(url_input,api_input)
     response = http.request(request)
     JSON.parse(response.read_body)
 end
+
+#agrega metodo armar pagina
+def buid_web_page(entrada)
+    inicio = "<html>\n<head>\n</head>\n<body>\n<ul>"
+    img=""
+    final = "\n</ul>\n</body>\n</html>"
+
+    entrada.each do |key, valor|
+        valor.each do |key2, valor2|
+            key2.each do |key3, valor3|
+                if key3 =='img_src'
+                    img += "\n\t<li><img src='#{valor3}'></li>"
+                end
+            end
+        end
+    end
+  File.write('./index.html',inicio+img+final)
+end
