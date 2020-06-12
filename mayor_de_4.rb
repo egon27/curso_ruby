@@ -3,47 +3,39 @@ valor1=ARGV[1].to_i
 valor2=ARGV[2].to_i
 valor3=ARGV[3].to_i
 
-if valor0 >valor1
-    if  valor1>valor2
-            if valor1>valor3
-                print valor1
-            else
-                if valor1==valor3
-                    print valor1
-                else
-                    print valor3
-                end
-            end
-    else
-            if valor1==valor2
-                if valor2>valor3
-                    print valor2
-                else
-                    print valor3
-                end
-            else
-            if valor2>valor3
-                    print valor2
-                else
-                    print valor3
-                end
-        end
-    end
-else
-    if valor0==valor1
-        if valor1==valor2
-                if valor2>valor3
-                    print valor2
-                else
-                    print valor3
-                end
-        end
-    else
-        if valor2>valor3
-            print valor2
-        else
-            print valor3
-        end
+if valor3==nil
+    valor3 = 0
+end
 
-    end
+if valor0 >= valor1
+    valor1 = valor0
+        if valor1 >= valor2
+            valor2 = valor1
+            if valor2 > valor3
+                puts valor2
+            else
+                puts valor3
+            end
+        else
+            if valor2 >= valor3
+                puts valor2
+            else
+                puts valor3
+            end
+        end
+    else
+        if valor1 >= valor2
+                valor2 = valor1
+            if valor2 >= valor3
+                puts valor2
+            else
+                puts valor3
+            end
+        else
+            if valor2 >= valor3
+                puts valor2
+            else
+                puts valor3
+            end
+        end
 end
