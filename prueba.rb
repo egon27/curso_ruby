@@ -35,3 +35,6 @@ def buid_web_page(entrada)
     end
   File.write('./index.html',inicio+img+final)
 end
+
+data = metodo_request(var_url,api_key)
+buid_web_page(data)
